@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Frågorna</h1>
+    <ol>
+    {% for question in questions %}
+        <li><b>{{ question[0] }}</b>
+            <ol>
+            {% for answer in question[1] %}
+                <li>{{ answer }}</li>
+            {% endfor %}
+            </ol>
+    {% endfor %}
+    </ol>
+{% endblock %}
