@@ -1,14 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 <h1>Frågorna</h1>
+<h3>{{ content_data[0] }} - {{ content_data[1][0] }}</h3>
     <ol>
-    {% for question in questions %}
-        <li><b>{{ question[0] }}</b>
-            <ol>
-            {% for answer in question[1] %}
-                <li>{{ answer }}</li>
-            {% endfor %}
-            </ol>
+    {% for svar in content_data[1][1] %}
+        <li>{{ svar }}</li>
     {% endfor %}
     </ol>
+<p><a href="{{ url_for('fraga', fraga_id=content_data[0]) }}">Nästa fråga</a></p>
 {% endblock %}
