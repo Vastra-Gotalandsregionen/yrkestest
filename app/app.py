@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, request, render_template, redirect, url_for
 
 from data import questions
 
@@ -11,9 +11,14 @@ def yrkestest():
     return render_template("start.html", questions=questions)
 
 
-@app.route("/fraga/<int:fraga_id>")
-def fraga(fraga_id):
-    if fraga_id == 3:
+@app.route("/fraga/", methods=['GET', 'POST'])
+def fraga():
+    if request.method == 'POST':
+        fraga_id = int(request.form['fraga'])
+    else:
+        fraga_id = 0
+
+    if fraga_id == 19:
         return redirect(url_for('resultat'))
     else:
         content = [fraga_id + 1, questions[fraga_id]]
@@ -23,6 +28,7 @@ def fraga(fraga_id):
 @app.route("/resultat")
 def resultat():
     return render_template("resultat.html")
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000, debug=True)

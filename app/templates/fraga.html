@@ -2,10 +2,10 @@
 {% block content %}
 <h1>Frågorna</h1>
 <h3>{{ content_data[0] }} - {{ content_data[1][0] }}</h3>
-    <ol>
+    <form action="/fraga/" method="POST">
+    <input type="hidden" name="fraga" value="{{ content_data[0] }}">
     {% for svar in content_data[1][1] %}
-        <li>{{ svar }}</li>
+    <button type"submit" value="{{ loop.index-1 }}" class="btn btn-warning btn-block">{{ svar }}</button>
     {% endfor %}
-    </ol>
-<p><a href="{{ url_for('fraga', fraga_id=content_data[0]) }}">Nästa fråga</a></p>
+    </form>
 {% endblock %}
