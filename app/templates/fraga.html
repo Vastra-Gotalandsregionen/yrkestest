@@ -1,11 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Frågorna</h1>
-<h3>{{ content_data[0] }} - {{ content_data[1][0] }}</h3>
-    <form action="/fraga/" method="POST">
+<h1>VGR - Yrkestet</h1>
+<div class="progress">
+    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: {{ content_data[0]*5 }}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+<h3>Fråga:</h3>
+<p class="lead">{{ content_data[1][0] }}</p>
+<form action="/fraga/" method="POST">
     <input type="hidden" name="fraga" value="{{ content_data[0] }}">
     {% for svar in content_data[1][1] %}
     <button type"submit" value="{{ loop.index-1 }}" class="btn btn-warning btn-block">{{ svar }}</button>
     {% endfor %}
-    </form>
+</form>
 {% endblock %}

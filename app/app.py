@@ -14,14 +14,14 @@ def yrkestest():
 @app.route("/fraga/", methods=['GET', 'POST'])
 def fraga():
     if request.method == 'POST':
-        fraga_id = int(request.form['fraga'])
+        fraga_id = int(request.form['fraga']) + 1
     else:
         fraga_id = 0
 
-    if fraga_id == 19:
+    if fraga_id == 20:
         return redirect(url_for('resultat'))
     else:
-        content = [fraga_id + 1, questions[fraga_id]]
+        content = [fraga_id, questions[fraga_id]]
         return render_template("fraga.html", content_data=content)
 
 
