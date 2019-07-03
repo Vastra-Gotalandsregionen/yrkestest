@@ -93,3 +93,26 @@ questions = [
           "Drivna Vaiana, som går sin egen väg", "Skärpta Liza Simpson, som har ordning på allt",
           "Uthålliga Askungen, som aldrig blir arg på någon"]],
 ]
+
+answers = [
+        ['s', 'd', 'c', 'i'],
+        ['d', 's', 'i', 'c'],
+        ['d', 's', 'i', 'c'],
+        ['c', 'd', 's', 'i'],
+        ['d', 'i', 'c', 's'],
+        ['s', 'd', 'c', 'i'],
+        ['i', 'c', 's', 'd'],
+        ['i', 'c', 'd', 's'],
+        ['c', 'i', 's', 'd'],
+        ['s', 'd', 'i', 'c'],
+        ['d', 'c', 'i', 's'],
+        ['c', 'i', 's', 'd'],
+        ['s', 'd', 'c', 'i'],
+        ['d', 'c', 's', 'i'],
+        ['i', 'd', 'c', 's'],
+        ['s', 'd', 'c', 'i'],
+        ['i', 'd', 'c', 's'],
+        ['d', 'c', 's', 'i'],
+        ['c', 's', 'i', 'd'],
+        ['i', 'd', 'c', 's'],
+]
