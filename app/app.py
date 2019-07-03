@@ -17,9 +17,11 @@ def yrkestest():
 @app.route("/fraga/", methods=['GET', 'POST'])
 def fraga():
     if request.method == 'POST':
+        session['svar'].append(int(request.form['svar']))
         session['fid'] = int(request.form['fid']) + 1
     else:
         session['fid'] = 0
+        session['svar'] = []
 
     if session['fid'] == 20:
         return redirect(url_for('resultat'))
