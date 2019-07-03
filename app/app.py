@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, redirect, url_for
+from flask import Flask, session, request, render_template, redirect, url_for
 
 from data import questions
 
@@ -17,14 +17,14 @@ def yrkestest():
 @app.route("/fraga/", methods=['GET', 'POST'])
 def fraga():
     if request.method == 'POST':
-        fraga_id = int(request.form['fraga']) + 1
+        session['fid'] = int(request.form['fid']) + 1
     else:
-        fraga_id = 0
+        session['fid'] = 0
 
-    if fraga_id == 20:
+    if session['fid'] == 20:
         return redirect(url_for('resultat'))
     else:
-        content = [fraga_id, questions[fraga_id]]
+        content = [session['fid'], questions[session['fid']]]
         return render_template("fraga.html", content_data=content)
 
 

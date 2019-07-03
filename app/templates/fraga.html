@@ -7,7 +7,7 @@
 <h3>Fråga:</h3>
 <p class="lead">{{ content_data[1][0] }}</p>
 <form action="/fraga/" method="POST">
-    <input type="hidden" name="fraga" value="{{ content_data[0] }}">
+    <input type="hidden" name="fid" value="{{ content_data[0] }}">
     {% for svar in content_data[1][1] %}
     <button type"submit" value="{{ loop.index-1 }}" class="btn btn-warning btn-block">{{ svar }}</button>
     {% endfor %}
