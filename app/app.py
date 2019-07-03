@@ -6,9 +6,12 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
 
 
-@app.route("/")
+@app.route("/", methods=['GET', 'POST'])
 def yrkestest():
-    return render_template("start.html", questions=questions)
+    if request.method == 'POST':
+        return redirect(url_for('fraga'))
+    else:
+        return render_template("start.html")
 
 
 @app.route("/fraga/", methods=['GET', 'POST'])

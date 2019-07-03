@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <h1>Välkommen till testet</h1>
-<p>Klicka <a href="{{ url_for('fraga') }}">börja testet</a> för att starta.</p>
+<form action="/" method="POST">
+    <button type="submit" class="btn btn-success btn-lg">Starta testet</button>
+</form>
 {% endblock %}
