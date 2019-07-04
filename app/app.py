@@ -1,6 +1,6 @@
 from flask import Flask, session, request, render_template, redirect, url_for
 
-from data import questions
+from data import questions, answers
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
@@ -32,7 +32,17 @@ def fraga():
 
 @app.route("/resultat")
 def resultat():
-    return render_template("resultat.html")
+    resultat = {'d': 0, 'i': 0, 's':0, 'c':0}
+    
+    for index, answer in enumerate(session['svar']):
+#        print(index, answer)
+        value = answers[index][answer]
+        if index == 12 or index == 13:
+            resultat[value] += 2
+        else:
+            resultat[value] += 1
+
+    return render_template("resultat.html", content_data=resultat)
 
 
 if __name__ == "__main__":
