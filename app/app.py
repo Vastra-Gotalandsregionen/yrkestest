@@ -1,6 +1,6 @@
 from flask import Flask, session, request, render_template, redirect, url_for
 
-from data import questions, answers
+from .data import questions, answers
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
