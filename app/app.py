@@ -1,9 +1,10 @@
 from flask import Flask, session, request, render_template, redirect, url_for
+from .config import Config
 
 from .data import questions, answers
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'secret!'
+app.config.from_object(Config)
 
 
 @app.route("/", methods=['GET', 'POST'])
