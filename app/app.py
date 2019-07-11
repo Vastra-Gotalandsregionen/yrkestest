@@ -18,8 +18,8 @@ def yrkestest():
 @app.route("/fraga/", methods=['GET', 'POST'])
 def fraga():
     if request.method == 'POST':
-        session['svar'].append(int(request.form['svar']))
-        session['fid'] = int(request.form['fid']) + 1
+        session['svar'].append(request.form.get('svar', type=int))
+        session['fid'] = request.form.get('fid', type=int) + 1
     else:
         session['fid'] = 0
         session['svar'] = []
