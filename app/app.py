@@ -11,6 +11,7 @@ def yrkestest():
     if request.method == 'POST':
         return redirect(url_for('fraga'))
     else:
+        session.clear()
         return render_template("start.html")
 
 
@@ -26,8 +27,9 @@ def fraga():
     if session['fid'] == 20:
         return redirect(url_for('resultat'))
     else:
-        content = [session['fid'], questions[session['fid']]]
-        return render_template("fraga.html", content_data=content)
+        fid = session['fid']
+        content = questions[session['fid']]
+        return render_template("fraga.html", fid=fid, content=content)
 
 
 @app.route("/resultat")
@@ -42,7 +44,7 @@ def resultat():
         else:
             resultat[value] += 1
 
-    return render_template("resultat.html", content_data=resultat)
+    return render_template("resultat.html", content=resultat)
 
 
 if __name__ == "__main__":
