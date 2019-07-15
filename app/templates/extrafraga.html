@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>VGR - Yrkestest</h1>
+<p>Knepigt värre, du behöver svara på en fråga till...</p>
+<h3>Fråga:</h3>
+<p class="lead">{{ fraga['question'] }}</p>
+<form action="/extrafraga/" method="POST">
+    <input type="hidden" name="fid" value="{{ fid }}">
+    {% for svar in val %}
+    <button type"submit" name="svar" value="{{ svar }}" class="btn btn-warning btn-block">{{ fraga[svar] }}</button>
+    {% endfor %}
+</form>
+{% endblock %}

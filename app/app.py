@@ -1,7 +1,7 @@
 from flask import Flask, session, request, render_template, redirect, url_for
 from .config import Config
 
-from .data import questions, answers
+from .data import questions, answers, extraquestion
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -15,6 +15,33 @@ def yrkestest():
         session.clear()
         return render_template("start.html")
 
+def rakna_poang(extra=None):
+    resultat = {'d': 0, 'i': 0, 's':0, 'c':0}
+    
+    for index, answer in enumerate(session['svar']):
+        value = answers[index][answer]
+        if index == 12 or index == 13:
+            resultat[value] += 2
+        else:
+            resultat[value] += 1
+
+    if extra:
+        resultat[extra] += 1
+
+    session['resultat'] = resultat
+
+    return None
+
+
+def testa_mest_svar():
+    maximum = max(session['resultat'].values())
+    antal = [k for k, v in session['resultat'].items() if v == maximum]
+    if len(antal) > 1:
+        session['utslagsfraga'] = antal
+        return True
+    else:
+        return False
+
 
 @app.route("/fraga/", methods=['GET', 'POST'])
 def fraga():
@@ -25,27 +52,32 @@ def fraga():
         session['fid'] = 0
         session['svar'] = []
 
-    if session['fid'] == 20:
-        return redirect(url_for('resultat'))
+    if session['fid'] == 2:
+        rakna_poang()
+        flera_max = testa_mest_svar()
+
+        if flera_max:
+            return redirect(url_for('utslagsfraga'))
+        else:
+            return redirect(url_for('resultat'))
     else:
         fid = session['fid']
         content = questions[session['fid']]
         return render_template("fraga.html", fid=fid, content=content)
 
 
+@app.route("/extrafraga/", methods=['GET', 'POST'])
+def utslagsfraga():
+    if request.method == 'POST':
+        rakna_poang(extra=request.form.get('svar'))
+        return redirect(url_for('resultat'))
+    else:
+        return render_template('extrafraga.html', fraga=extraquestion, val=session['utslagsfraga'])
+
 @app.route("/resultat")
 def resultat():
-    resultat = {'d': 0, 'i': 0, 's':0, 'c':0}
-    
-    for index, answer in enumerate(session['svar']):
-#        print(index, answer)
-        value = answers[index][answer]
-        if index == 12 or index == 13:
-            resultat[value] += 2
-        else:
-            resultat[value] += 1
 
-    return render_template("resultat.html", content=resultat)
+    return render_template("resultat.html", content=session['resultat'])
 
 
 if __name__ == "__main__":

@@ -116,3 +116,11 @@ answers = [
         ['c', 's', 'i', 'd'],
         ['i', 'd', 'c', 's'],
 ]
+
+extraquestion = {
+        'question': 'Vad passar bäst in på dig?',
+        's': 'Hjälpsam',
+        'd': 'Orädd',
+        'c': 'Noggrann',
+        'i': 'Social',
+}
