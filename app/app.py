@@ -1,7 +1,7 @@
 from flask import Flask, session, request, render_template, redirect, url_for
 from .config import Config
 
-from .data import questions, answers, extraquestion
+from .data import questions, answers, extraquestion, rec_text, rec_jobs
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -76,8 +76,9 @@ def utslagsfraga():
 
 @app.route("/resultat")
 def resultat():
-
-    return render_template("resultat.html", content=session['resultat'])
+    primary = max(session['resultat'], key=session['resultat'].get)
+    content = {'description': rec_text[primary], 'primary': rec_jobs[primary]}
+    return render_template("resultat.html", content=content)
 
 
 if __name__ == "__main__":

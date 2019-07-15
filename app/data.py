@@ -124,3 +124,17 @@ extraquestion = {
         'c': 'Noggrann',
         'i': 'Social',
 }
+
+rec_text = {
+        'd': 'Du gillar att utveckla och förbättra saker och har inte något emot att bestämma. Du vill nå snabba resultat och har inget till övers för ineffektivitet. Inom hälso- och sjukvården finns flera områden där du kan få användning för dessa egenskaper. Om du även besitter andra goda egenskaper som empati, analysförmåga och kreativitet kan dina drivkrafter passa bra i exempelvis en ledarskapsroll.',
+        'i': 'Du är en social person som gillar att bli inspirerad och att inspirera andra. Du är spontan, kreativ och har oftast inget större behov av att överväga något länge innan du fattar beslut. Du skulle trivas i roller där du får komma med idéer, sprida god stämning och motivera andra.',
+        's': 'Du är en empatisk person som gillar att vara till hjälp. Du är omtänksam, bra på att kompromissa och gillar när alla är överens. Du har inget behov av att bossa över andra och trivs i roller där du får fixa, stötta och känna att du gör skillnad.',
+        'c': 'Du är en ordningsam och analyserande person som gillar att ha koll på läget. Du föredrar att tänka igenom saker så att resultaten blir så bra som möjligt. Du är seriös, har höga krav på dig själv och ogillar slarv. Du skulle trivas i roller där du får möjlighet att fördjupa dig och där det är viktigt att allt blir korrekt.',
+}
+
+rec_jobs = {
+        'd': [None],
+        'i': ['Arbetsterapeut', 'Dietist', 'Fysioterapeut'],
+        's': ['Undersköterska', 'Tandsköterska', 'Barnmorska', 'Sjuksköterska', 'Tandhygienist', 'Läkare', 'Psykolog', 'Tandläkare'],
+        'c': ['Biomedicinsk analytiker', 'Medicinteknisk ingenjör', 'Medicinsk sekreterare', 'Tandläkare', 'Läkare', 'Psykolog'],
+}

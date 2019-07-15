@@ -1,11 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 <h1>Här är ditt resultat</h1>
-<p>
-    D - {{ content['d'] }}<br/>
-    I - {{ content['i'] }}<br/>
-    S - {{ content['s'] }}<br/>
-    C - {{ content['c'] }}<br/>
-</p>
-<p><b>WOW!</b> - Du är bäst på nästan allt!</p>
-{% endblock %}
+<p>{{ content['description'] }}</p>
+<h4>Yrken som kan passa dig är:</h4>
+<p>{% for job in content['primary'] %}
+{{ job }}{{ ', ' if not loop.last }}
+{% endfor %}</p>
+{% endblock content %}
