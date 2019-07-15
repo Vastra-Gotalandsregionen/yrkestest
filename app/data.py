@@ -9,7 +9,7 @@ questions = [
         ["Du ska ut och campa ett par nätter med några vänner. Vad bidrar du med i gruppen?",
          [
                  "Jag har koll på att vi ställer upp tältet på en bra plats och ser till att vi följer instruktionerna så det byggs upp på rätt sätt.",
-                 " Jag är förmodligen den bestämt hur vi ska organisera allt och beslutat hur vi ska ta oss dit för att det ska gå snabbt och smidigt.",
+                 " Jag är förmodligen den som bestämt hur vi ska organisera allt och beslutat hur vi ska ta oss dit för att det ska gå snabbt och smidigt.",
                  "Jag tar med lite smått och gott som någon i gänget kan komma att behöva. T.ex. powerbanks i fall någons mobil laddar ur, värktabletter och plåster.",
                  "Jag kanske fixar en spellista med skön musik och när vi kommer fram föreslår jag roliga lekar och kommer på att vi ska nattbada."]],
         [
@@ -133,7 +133,7 @@ rec_text = {
 }
 
 rec_jobs = {
-        'd': [None],
+        'd': [],
         'i': ['Arbetsterapeut', 'Dietist', 'Fysioterapeut'],
         's': ['Undersköterska', 'Tandsköterska', 'Barnmorska', 'Sjuksköterska', 'Tandhygienist', 'Läkare', 'Psykolog', 'Tandläkare'],
         'c': ['Biomedicinsk analytiker', 'Medicinteknisk ingenjör', 'Medicinsk sekreterare', 'Tandläkare', 'Läkare', 'Psykolog'],

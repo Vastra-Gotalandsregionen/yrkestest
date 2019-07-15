@@ -52,7 +52,7 @@ def fraga():
         session['fid'] = 0
         session['svar'] = []
 
-    if session['fid'] == 2:
+    if session['fid'] == 20:
         rakna_poang()
         flera_max = testa_mest_svar()
 
@@ -74,10 +74,23 @@ def utslagsfraga():
     else:
         return render_template('extrafraga.html', fraga=extraquestion, val=session['utslagsfraga'])
 
+
 @app.route("/resultat")
 def resultat():
     primary = max(session['resultat'], key=session['resultat'].get)
-    content = {'description': rec_text[primary], 'primary': rec_jobs[primary]}
+
+    temp = session['resultat']
+    temp.pop(primary, None)
+
+    secondary = max(temp, key=temp.get)
+
+    secondary_jobs = []
+
+    for job in rec_jobs[secondary]:
+        if job not in rec_jobs[primary]:
+            secondary_jobs.append(job)
+
+    content = {'description': rec_text[primary], 'primary': rec_jobs[primary], 'secondary': secondary_jobs}
     return render_template("resultat.html", content=content)
 
 
