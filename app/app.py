@@ -92,7 +92,3 @@ def resultat():
 
     content = {'description': rec_text[primary], 'primary': rec_jobs[primary], 'secondary': secondary_jobs}
     return render_template("resultat.html", content=content)
-
-
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000, debug=True)
