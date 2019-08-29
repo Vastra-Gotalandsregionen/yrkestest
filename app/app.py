@@ -15,8 +15,9 @@ def yrkestest():
         session.clear()
         return render_template("start.html")
 
+
 def rakna_poang(extra=None):
-    resultat = {'d': 0, 'i': 0, 's':0, 'c':0}
+    resultat = {'d': 0, 'i': 0, 's': 0, 'c': 0}
     
     for index, answer in enumerate(session['svar']):
         value = answers[index][answer]
