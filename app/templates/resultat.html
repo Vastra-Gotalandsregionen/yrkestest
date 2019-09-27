@@ -9,7 +9,7 @@
     {% endfor %}</p>
 {% endif %}
 {% if content['secondary'][0] %}
-    <h4>Yrken som kanske passa dig är:</h4>
+    <h2 class="h4">Yrken som kanske passa dig är:</h2>
     <p>{% for job in content['secondary'] %}
     {{ job }}{{ ', ' if not loop.last }}
     {% endfor %}</p>
