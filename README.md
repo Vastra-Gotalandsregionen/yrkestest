@@ -10,3 +10,10 @@
 8. kör kommandot `flask run`
 9. Gå till webaddressen som visas i terminalen.
 10. Voilà!
+
+För att start debuggläge så att du inte behöver starta om flask när du ändrar i koden:
+Mac/Linux:
+export FLASK_DEBUG=1
+
+Window:
+set FLASK_DEBUG=1
