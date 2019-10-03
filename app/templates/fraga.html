@@ -2,14 +2,17 @@
 {% block content %}
 <h1>VGR - Yrkestest</h1>
 <div class="progress">
-    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: {{ fid*5 }}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: {{ 100/progress*fid }}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
   </div>
 <h3>Fråga:</h3>
-<p class="lead">{{ content[0] }}</p>
 <form action="/fraga/" method="POST">
-    <input type="hidden" name="fid" value="{{ fid }}">
+  <input type="hidden" name="fid" value="{{ fid }}">
+  <fieldset>
+    <legend class="lead">{{ content[0] }}</legend>
+
     {% for svar in content[1] %}
     <button type"submit" name="svar" value="{{ loop.index-1 }}" class="btn btn-warning btn-block">{{ svar }}</button>
     {% endfor %}
+  </fieldset>
 </form>
 {% endblock %}
