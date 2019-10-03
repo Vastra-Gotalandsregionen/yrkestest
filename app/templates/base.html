@@ -15,6 +15,8 @@
         {% block content %}{% endblock %}
     </div>
     <!-- Optional JavaScript -->
+    <script type="text/javascript"
+         src="{{ url_for('static', filename='main.js') }}"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -23,8 +25,16 @@
 </html>
 
 <style lang="css">
+body {
+  /* color: #fff;
+  background: #000; */
+}
 .container {
-  margin-top: 3rem;
+  margin-top: 2rem;
+}
+
+h1 {
+  margin-bottom: 1rem;
 }
 
 .instruktions-p {
@@ -45,6 +55,10 @@
 .btn-success:hover {
   background: #582c83;
   border-color: #582c83;
+}
+
+h3 {
+  margin-top: 1rem;
 }
 
 .lead {
@@ -68,8 +82,37 @@
 
 }
 
+.loading-timer {
+  display: flex;
+  /* display: none; */
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 60vh;
+  margin: 0;
+}
+
+#arcs div {
+    border: 2px solid #000;
+    display: inline-block;
+    min-width: 4em;
+    min-height: 4em;
+    padding: 0.5em;
+    border-radius: 50%;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    transform: rotate(0deg);
+}
+
+.result-container {
+  display: none;
+}
+
 .fitting-jobs-p {
   font-size: 1.5rem;
   margin-bottom: 3rem;
+  /* display: none; */
 }
 </style>
