@@ -1,15 +1,20 @@
 from flask import Flask, session, request, render_template, redirect, url_for
 from .config import Config
 
-from .data import questions, answers, extraquestion, rec_text, rec_jobs
+from .data import questions, answers, extraquestion, rec_text, rec_jobs, addextraquestions, addextraquestionsanswers, how_many_questions
 
 app = Flask(__name__)
 app.config.from_object(Config)
 
-
-@app.route("/", methods=['GET', 'POST'])
+@app.route("/", methods=['GET', 'POST'])  
 def yrkestest():
     if request.method == 'POST':
+        if request.form.get('extra') == 'extra':
+            answers.extend(addextraquestionsanswers)
+            questions.extend(addextraquestions)
+            session['numberofquestions'] = 20
+        else:
+            session['numberofquestions'] = 12
         return redirect(url_for('fraga'))
     else:
         session.clear()
@@ -53,7 +58,7 @@ def fraga():
         session['fid'] = 0
         session['svar'] = []
 
-    if session['fid'] == 20:
+    if session['fid'] == session['numberofquestions']:
         rakna_poang()
         flera_max = testa_mest_svar()
 
@@ -64,7 +69,8 @@ def fraga():
     else:
         fid = session['fid']
         content = questions[session['fid']]
-        return render_template("fraga.html", fid=fid, content=content)
+        progress = session['numberofquestions']
+        return render_template("fraga.html", fid=fid, content=content, progress=progress)
 
 
 @app.route("/extrafraga/", methods=['GET', 'POST'])
