@@ -2,7 +2,7 @@
 <h1>Här är ditt resultat</h1>
 <p class="fitting-jobs-p one">{{ content["description"] }}</p>
   {% if content['primary'][0] %}
-  <h4 class="h3">Yrken som kan passa dig är:</h4>
+  <h2 class="h4">Yrken som kan passa dig är:</h2>
   <p class="fitting-jobs-p two">
     {% for job in content['primary'] %} {{ job }}{{ ', ' if not loop.last }} {%
     endfor %}
