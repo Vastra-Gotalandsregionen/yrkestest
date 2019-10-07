@@ -1,4 +1,13 @@
 {% extends "base.html" %} {% block content %}
+<div id="arcs">
+  <div class="arcs-div" onclick="spin()">
+      <div>
+        <div>
+          <div></div>
+        </div>
+      </div>
+  </div>
+</div>
 <h1>Här är ditt resultat</h1>
 <p class="fitting-jobs-p one">{{ content["description"] }}</p>
   {% if content['primary'][0] %}
