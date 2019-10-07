@@ -8,6 +8,7 @@
       </div>
   </div>
 </div>
+<div class="result-container">
 <h1>Här är ditt resultat</h1>
 <p class="fitting-jobs-p one">{{ content["description"] }}</p>
   {% if content['primary'][0] %}
@@ -23,4 +24,5 @@
     }}{{ ', ' if not loop.last }} {% endfor %}
   </p>
   {% endif %}
+</div>
 {% endblock content %}

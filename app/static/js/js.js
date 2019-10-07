@@ -1,12 +1,6 @@
-function checkLoaded() {
-    return document.readyState === "complete";
-}
+var arcs = document.querySelector('.arcs-div');
 
-function spin() {
-    if(checkLoaded() == true) {
-
-        setInterval(() => {
-            document.querySelector('#arcs').style.display = "none";
-        }, 2000);
-    }
-}
+arcs.addEventListener( 'animationend', function( event ) { 
+    document.querySelector('#arcs').style.display = 'none';
+    document.querySelector('.result-container').style.display = 'block';
+}, false );
