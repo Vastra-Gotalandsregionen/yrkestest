@@ -1,9 +1,9 @@
 import os, sys
 
 from flask import Flask, session, request, render_template, redirect, url_for
-from .config import Config
+from config import Config
 
-from .data import questions, answers, extraquestion, rec_text, rec_jobs, addextraquestions, addextraquestionsanswers, how_many_questions
+from data import questions, answers, extraquestion, rec_text, rec_jobs, addextraquestions, addextraquestionsanswers, how_many_questions
 
 
 def rakna_poang(extra=None):
@@ -105,5 +105,6 @@ def create_app():
         return render_template("resultat.html", content=content)
 
     return app
+
 
 app = create_app()
