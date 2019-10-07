@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% block content %}
 <div id="arcs">
-  <div class="arcs-div" onclick="spin()">
+  <div class="arcs-div">
       <div>
         <div>
           <div></div>
@@ -26,3 +26,7 @@
   {% endif %}
 </div>
 {% endblock content %}
+{% block script %}
+<script type="text/javascript"
+src="{{ url_for('static', filename='js/js.js') }}"></script>
+{% endblock %}
