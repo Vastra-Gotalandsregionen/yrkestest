@@ -2,7 +2,7 @@
 {% block content %}
 <h1>VGR - Yrkestest</h1>
 <div class="progress">
-    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: {{ 100/progress*fid }}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: {{ 100/progress*fid }}%" aria-valuenow="{{ fid+1 }}" aria-valuemin="0" aria-valuemax="{{ progress }}"></div>
   </div>
 <h3>Fråga:</h3>
 <form action="/fraga/" method="POST">
