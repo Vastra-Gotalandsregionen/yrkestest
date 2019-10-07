@@ -13,7 +13,7 @@ questions = [
                 [
                         "Älskar grupparbeten! Jag tycker det är viktigt att vi visar en härlig känsla i broschyren så jag kommer nog med idéer på hur vi kan få fram det. Det vore också kul om vi gjorde broschyren på något nytt sätt, kanske som en app. ",
                         "Kan bli roligt även om jag gärna jobbar själv. Hoppas vi kan dela upp arbetet så att jag kan fokusera på det jag vill i lugn och ro. Troligen ansvarar jag för att all fakta i texterna stämmer, att bilderna har korrekt upplösning och sådana saker.",
-                        "Roligt, det blir säkert bra! Jag har lätt för att komma överens med alla i grupparbeten. Jag hjälper jag gärna till med det som behövs mest så att allt funkar bra. Det viktigaste är att vi har trevligt.",
+                        "Roligt, det blir säkert bra! Jag har lätt för att komma överens med alla i grupparbeten. Jag hjälper gärna till med det som behövs mest så att allt funkar bra. Det viktigaste är att vi har trevligt.",
                         "Vore kul om vår grupp tar hem det! Hoppas att alla gör vad de ska, så att vi inte behöver långa möten. Jag ser till att få genomföra de idéer jag har och bestämmer strukturen för broschyren så att det blir ordentligt gjort."]],
         ["Vad passar bäst in på dig?",
          ["Livlig & uppmärksamhetskrävande", "Korrekt & eftertänksam", "Snabb & bossig",
@@ -29,7 +29,7 @@ questions = [
                 "En kompis nya cykel har blivit stulen. Trots att den var fastlåst vid cykelställen bakom skolan verkar någon ha hunnit kapa låset utan att ha blivit upptäckt. Hur reagerar du?",
                 [
                         "Jag blir upprörd och säger att jag tänker ta upp med elevrådet eller rektorn att cykelställen borde flyttas till en plats med bättre uppsikt så att inte fler drabbas. ",
-                        "Jag berättar att jag alltid bruka använda två lås så att risken för denna typ av händelser minimeras.",
+                        "Jag berättar att jag alltid brukar använda två lås så att risken för denna typ av händelser minimeras.",
                         "Jag kommer på att vi kan anordna en fest och ta inträde för att samla in pengar till en ny cykel till vår kompis. Varför inte vända detta till något kul?",
                         "Jag kramar om min kompis och tröstar hen, frågar hur det känns osv."]],
         ["På vilket sätt vill du helst arbeta med människor",
