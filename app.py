@@ -1,29 +1,14 @@
+import os, sys
+
 from flask import Flask, session, request, render_template, redirect, url_for
 from .config import Config
 
 from .data import questions, answers, extraquestion, rec_text, rec_jobs, addextraquestions, addextraquestionsanswers, how_many_questions
 
-app = Flask(__name__)
-app.config.from_object(Config)
-
-@app.route("/", methods=['GET', 'POST'])  
-def yrkestest():
-    if request.method == 'POST':
-        if request.form.get('extra') == 'extra':
-            answers.extend(addextraquestionsanswers)
-            questions.extend(addextraquestions)
-            session['numberofquestions'] = 20
-        else:
-            session['numberofquestions'] = 12
-        return redirect(url_for('fraga'))
-    else:
-        session.clear()
-        return render_template("start.html")
-
 
 def rakna_poang(extra=None):
     resultat = {'d': 0, 'i': 0, 's': 0, 'c': 0}
-    
+
     for index, answer in enumerate(session['svar']):
         value = answers[index][answer]
         if index == 12 or index == 13:
@@ -49,53 +34,76 @@ def testa_mest_svar():
         return False
 
 
-@app.route("/fraga/", methods=['GET', 'POST'])
-def fraga():
-    if request.method == 'POST':
-        session['svar'].append(request.form.get('svar', type=int))
-        session['fid'] = request.form.get('fid', type=int) + 1
-    else:
-        session['fid'] = 0
-        session['svar'] = []
+def create_app():
+    app = Flask(__name__, instance_relative_config=True)
+    app.config.from_object(Config)
 
-    if session['fid'] == session['numberofquestions']:
-        rakna_poang()
-        flera_max = testa_mest_svar()
-
-        if flera_max:
-            return redirect(url_for('utslagsfraga'))
+    @app.route("/", methods=['GET', 'POST'])
+    def yrkestest():
+        if request.method == 'POST':
+            if request.form.get('extra') == 'extra':
+                answers.extend(addextraquestionsanswers)
+                questions.extend(addextraquestions)
+                session['numberofquestions'] = 20
+            else:
+                session['numberofquestions'] = 12
+            return redirect(url_for('fraga'))
         else:
+            session.clear()
+            return render_template("start.html")
+
+
+    @app.route("/fraga/", methods=['GET', 'POST'])
+    def fraga():
+        if request.method == 'POST':
+            session['svar'].append(request.form.get('svar', type=int))
+            session['fid'] = request.form.get('fid', type=int) + 1
+        else:
+            session['fid'] = 0
+            session['svar'] = []
+
+        if session['fid'] == session['numberofquestions']:
+            rakna_poang()
+            flera_max = testa_mest_svar()
+
+            if flera_max:
+                return redirect(url_for('utslagsfraga'))
+            else:
+                return redirect(url_for('resultat'))
+        else:
+            fid = session['fid']
+            content = questions[session['fid']]
+            progress = session['numberofquestions']
+            return render_template("fraga.html", fid=fid, content=content, progress=progress)
+
+
+    @app.route("/extrafraga/", methods=['GET', 'POST'])
+    def utslagsfraga():
+        if request.method == 'POST':
+            rakna_poang(extra=request.form.get('svar'))
             return redirect(url_for('resultat'))
-    else:
-        fid = session['fid']
-        content = questions[session['fid']]
-        progress = session['numberofquestions']
-        return render_template("fraga.html", fid=fid, content=content, progress=progress)
+        else:
+            return render_template('extrafraga.html', fraga=extraquestion, val=session['utslagsfraga'])
 
 
-@app.route("/extrafraga/", methods=['GET', 'POST'])
-def utslagsfraga():
-    if request.method == 'POST':
-        rakna_poang(extra=request.form.get('svar'))
-        return redirect(url_for('resultat'))
-    else:
-        return render_template('extrafraga.html', fraga=extraquestion, val=session['utslagsfraga'])
+    @app.route("/resultat")
+    def resultat():
+        primary = max(session['resultat'], key=session['resultat'].get)
 
+        temp = session['resultat']
+        temp.pop(primary, None)
 
-@app.route("/resultat")
-def resultat():
-    primary = max(session['resultat'], key=session['resultat'].get)
+        secondary = max(temp, key=temp.get)
 
-    temp = session['resultat']
-    temp.pop(primary, None)
+        secondary_jobs = []
 
-    secondary = max(temp, key=temp.get)
+        for job in rec_jobs[secondary]:
+            if job not in rec_jobs[primary]:
+                secondary_jobs.append(job)
 
-    secondary_jobs = []
+        content = {'description': rec_text[primary], 'primary': rec_jobs[primary], 'secondary': secondary_jobs}
+        return render_template("resultat.html", content=content)
 
-    for job in rec_jobs[secondary]:
-        if job not in rec_jobs[primary]:
-            secondary_jobs.append(job)
+    return app
 
-    content = {'description': rec_text[primary], 'primary': rec_jobs[primary], 'secondary': secondary_jobs}
-    return render_template("resultat.html", content=content)
+app = create_app()
