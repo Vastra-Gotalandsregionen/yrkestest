@@ -30,7 +30,7 @@ questions = [
                 [
                         "Jag blir upprörd och säger att jag tänker ta upp med elevrådet eller rektorn att cykelställen borde flyttas till en plats med bättre uppsikt så att inte fler drabbas. ",
                         "Jag berättar att jag alltid bruka använda två lås så att risken för denna typ av händelser minimeras.",
-                        "Jag kommer på att vi kan anordna en fest och ta inträde för att samla in pengar till en ny cykel till vår kompis. Jag sprider infon via mitt kontaktnät på sociala medier. Varför inte vända detta till något kul?",
+                        "Jag kommer på att vi kan anordna en fest och ta inträde för att samla in pengar till en ny cykel till vår kompis. Varför inte vända detta till något kul?",
                         "Jag kramar om min kompis och tröstar hen, frågar hur det känns osv."]],
         ["På vilket sätt vill du helst arbeta med människor",
          ["Att praktiskt hjälpa och stötta människor",

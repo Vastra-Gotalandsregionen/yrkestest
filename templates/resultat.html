@@ -10,7 +10,7 @@
 </div>
 <div class="result-container">
 <h1>Här är ditt resultat</h1>
-<p class="fitting-jobs-p one">{{ content["description"] }}</p>
+<p class="fitting-jobs-p one text-left">{{ content["description"] }}</p>
   {% if content['primary'][0] %}
   <h2 class="h3">Yrken som kan passa dig är:</h2>
   <p class="fitting-jobs-p two">
@@ -18,12 +18,13 @@
     endfor %}
   </p>
   {% endif %} {% if content['secondary'][0] %}
-  <h3 class="h4">Yrken som kanske passa dig är:</h3>
+  <h2 class="h4">Yrken som kanske passa dig är:</h2>
   <p class="fitting-jobs-p three">
     {% for job in content['secondary'] %} {{ job
     }}{{ ', ' if not loop.last }} {% endfor %}
   </p>
   {% endif %}
+  <p><a href="https://www.vgregion.se/jobba-i-vgr/yrkesguide-for-unga/yrken-inom-halso--och-sjukvard/">Här kan du läsa om dina yrkesförlag och om fler yrken inom hälso- och sjukvård.</a></p>
 </div>
 {% endblock content %}
 {% block script %}

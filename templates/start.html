@@ -1,15 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Välkommen till VGR Yrkestest</h1>
-<p class="lead">Du kommer nu att få svara på ett antal frågor, och från dina svar kommer vi att räkna ut vilka yrken som kan passa dig bäst.</p>
+<h1>Välkommen till Västra Götalandsregionens yrkestest för unga</h1>
+<p class="lead mt-5">Svara på frågorna så får du tips på yrken som kan passa dig!</p>
 <p class="instruktions-p"><strong>Instruktion:</strong> Tryck på det svar som passar in på dig bäst. Nästa fråga visas automatiskt därefter.</p>
-<form action="/" method="POST" class="start-form">
+<form action="/" method="POST" class="start-form mb-5">
     <button type="submit" class="btn btn-success btn-lg">Starta testet</button>
     <div class="form-check">
     <input type="checkbox" name="extra" value="extra" id="more" class="form-check-input">
     <label class="form-check-label" for="more">Lägg till extra frågor</label>
     </div>
 </form>
-<br/>
 <p><strong>Cookies:</strong> Appen sparar en temporär cookie som behövs för att testet skall fungera. Vi samlar <em>inte</em> in någon personligt identifierbar information.</p>
 {% endblock %}
