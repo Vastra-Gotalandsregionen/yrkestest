@@ -47,11 +47,14 @@ def create_app():
                 session['numberofquestions'] = 20
             else:
                 session['numberofquestions'] = 12
+
+            session['fid'] = 0
+            session['svar'] = []
+
             return redirect(url_for('fraga'))
         else:
             session.clear()
             return render_template("start.html")
-
 
     @app.route("/fraga/", methods=['GET', 'POST'])
     def fraga():
@@ -59,8 +62,10 @@ def create_app():
             session['svar'].append(request.form.get('svar', type=int))
             session['fid'] = request.form.get('fid', type=int) + 1
         else:
-            session['fid'] = 0
-            session['svar'] = []
+            fid = session['fid']
+            content = questions[session['fid']]
+            progress = session['numberofquestions']
+            return render_template("fraga.html", fid=fid, content=content, progress=progress)
 
         if session['fid'] == session['numberofquestions']:
             rakna_poang()
@@ -71,11 +76,7 @@ def create_app():
             else:
                 return redirect(url_for('resultat'))
         else:
-            fid = session['fid']
-            content = questions[session['fid']]
-            progress = session['numberofquestions']
-            return render_template("fraga.html", fid=fid, content=content, progress=progress)
-
+            return redirect(url_for('fraga'))
 
     @app.route("/extrafraga/", methods=['GET', 'POST'])
     def utslagsfraga():
@@ -84,7 +85,6 @@ def create_app():
             return redirect(url_for('resultat'))
         else:
             return render_template('extrafraga.html', fraga=extraquestion, val=session['utslagsfraga'])
-
 
     @app.route("/resultat")
     def resultat():

@@ -18,13 +18,14 @@
     endfor %}
   </p>
   {% endif %} {% if content['secondary'][0] %}
-  <h2 class="h4">Yrken som kanske passa dig är:</h2>
+  <h2 class="h4">Yrken som kanske passar dig är:</h2>
   <p class="fitting-jobs-p three">
     {% for job in content['secondary'] %} {{ job
     }}{{ ', ' if not loop.last }} {% endfor %}
   </p>
   {% endif %}
   <p><a href="https://www.vgregion.se/jobba-i-vgr/yrkesguide-for-unga/yrken-inom-halso--och-sjukvard/">Här kan du läsa om dina yrkesförlag och om fler yrken inom hälso- och sjukvård.</a></p>
+  <p>[ <a href="{{ url_for('yrkestest') }}">Gör testet igen</a> ]</p>
 </div>
 {% endblock content %}
 {% block script %}
