@@ -11,7 +11,7 @@ def rakna_poang(extra=None):
 
     for index, answer in enumerate(session['svar']):
         value = answers[index][answer]
-        if index == 12 or index == 13:
+        if index == 14 or index == 15:
             resultat[value] += 2
         else:
             resultat[value] += 1
@@ -46,7 +46,7 @@ def create_app():
                 questions.extend(addextraquestions)
                 session['numberofquestions'] = 20
             else:
-                session['numberofquestions'] = 12
+                session['numberofquestions'] = 10
 
             session['fid'] = 0
             session['svar'] = []

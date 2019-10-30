@@ -7,24 +7,17 @@ questions = [
                  "Jag har koll på att vi ställer upp tältet på en bra plats och ser till att vi följer instruktionerna så det byggs upp på rätt sätt.",
                  " Jag har bestämt hur vi ska organisera allt och beslutat hur vi ska ta oss dit för att det ska gå snabbt och smidigt.",
                  "Jag tar med lite smått och gott som någon kan komma att behöva. T.ex. powerbanks till mobiler, värktabletter och plåster.",
-                 "Jag kanske fixar en spellista med skön musik och när vi kommer fram föreslår jag roliga lekar och kommer på att vi ska nattbada."]],
+                 "Jag fixar en spellista med skön musik. När vi kommer fram föreslår jag kul lekar och kommer på att vi ska nattbada."]],
         [
-                "Klassen har fått i uppgift att gruppvis göra förslag till en ny broschyr om er skola. Den broschyr som läraren gillar bäst kommer att tryckas och delas ut vid öppet hus och liknande. Vad tänker du och vilken roll tar du i gruppen? ",
+                "Klassen har fått i uppgift att gruppvis göra förslag till en ny broschyr om er skola. Den broschyr som läraren gillar bäst kommer att delas ut vid öppet hus och liknande. Vad tänker du och vilken roll tar du i gruppen?",
                 [
-                        "Älskar grupparbeten! Jag tycker det är viktigt att vi visar en härlig känsla i broschyren så jag kommer nog med idéer på hur vi kan få fram det. Det vore också kul om vi gjorde broschyren på något nytt sätt, kanske som en app. ",
-                        "Kan bli roligt även om jag gärna jobbar själv. Hoppas vi kan dela upp arbetet så att jag kan fokusera på det jag vill i lugn och ro. Troligen ansvarar jag för att all fakta i texterna stämmer, att bilderna har korrekt upplösning och sådana saker.",
-                        "Roligt, det blir säkert bra! Jag har lätt för att komma överens med alla i grupparbeten. Jag hjälper gärna till med det som behövs mest så att allt funkar bra. Det viktigaste är att vi har trevligt.",
-                        "Vore kul om vår grupp tar hem det! Hoppas att alla gör vad de ska, så att vi inte behöver långa möten. Jag ser till att få genomföra de idéer jag har och bestämmer strukturen för broschyren så att det blir ordentligt gjort."]],
+                        "Älskar grupparbeten! Det är viktigt med en härlig känsla i broschyren så jag kommer med idéer om hur vi kan visa det. Det vore också kul om vi gjorde broschyren på något nytt sätt, kanske som en app",
+                        "Kan bli roligt även om jag helst jobbar själv i lugn och ro. Troligen ansvarar jag för att fakta i texterna stämmer och sådana saker.",
+                        "Roligt! Jag har lätt för att komma överens med alla i grupparbeten. Jag hjälper till med det som behövs mest så att allt funkar bra och vi har trevligt.",
+                        "Vore kul om vår grupp tar hem det! Jag ser till att få genomföra de idéer jag har och bestämmer strukturen för broschyren så att det blir ordentligt gjort."]],
         ["Vad passar bäst in på dig?",
          ["Livlig & uppmärksamhetskrävande", "Korrekt & eftertänksam", "Snabb & bossig",
           "Vänlig & försiktig"]],
-        [
-                "Du är på en stor invigningsfest för en ny ungdomsgård. Där är många du inte känner. Hur tänker och agerar du i början av festen?",
-                [
-                        "Jag gillar inte stora grupper så försöker hitta någon jag har gemensamma intressen med. Det kan bli lite jobbigt eftersom jag då måste småprata först och jag inte är superbra på det. Men hittar jag rätt personer kan det bli trevligt med en intressant diskussion i lugn och ro i ett hörn.",
-                        "Superkul! Jag minglar runt och snackar med alla. Tar kvällen som den kommer, skämtar, skrattar och har inget emot att stå i centrum om det skulle råka bli så.",
-                        "Jag småpratar med andra om trevliga grejer, kollar om de som fixat festen behöver hjälp och går kanske fram till någon som verkar ensam så att hen inte känner sig utanför.",
-                        "Jag gillar att prata med andra och berätta om något spännande eller kul jag sysslar med. Jag är inte heller rädd för att kasta mig in i hetsig diskussion som verkar intressant, även om de andra har en annan åsikt än vad jag har."]],
         [
                 "En kompis nya cykel har blivit stulen. Trots att den var fastlåst vid cykelställen bakom skolan verkar någon ha hunnit kapa låset utan att ha blivit upptäckt. Hur reagerar du?",
                 [
@@ -50,9 +43,6 @@ questions = [
           "Hjälpa andra att bli motiverade"]],
         ["Vem i Bamse identifierar du dig mest med?",
          ["Spralliga Mini Hopp", "Modiga Nalle-Maja", "Finurliga Skalman", "Hjälpsamma Bamse"]],
-        ["Vilken Astrid Lindgren-karaktär identifierar du dig mest med?",
-         ["Orubbliga rövarhövdingen Mattis från Ronja", "Visa Skalle-Per från Ronja Rövardotter",
-          "Fridsamma drängen Alfred från Emil i Lönneberga", "Impulsiva Emil i Lönneberga"]],
         ["Vilken av dessa animerade karaktärer identifierar du dig mest med?",
          ["Partyglada Poppy i Trolls, som tar livet med en klackspark",
           "Drivna Vaiana, som går sin egen väg", "Skärpta Liza Simpson, som har ordning på allt",
@@ -64,17 +54,24 @@ answers = [
         ['c', 'd', 's', 'i'],
         ['i', 'c', 's', 'd'],
         ['i', 'c', 'd', 's'],
-        ['c', 'i', 's', 'd'],
         ['d', 'c', 'i', 's'],
         ['s', 'd', 'c', 'i'],
         ['d', 'c', 's', 'i'],
         ['s', 'd', 'c', 'i'],
         ['i', 'd', 'c', 's'],
-        ['d', 'c', 's', 'i'],
         ['i', 'd', 'c', 's'],
 ]
 
 addextraquestions = [
+        ["Du är på en stor invigningsfest för en ny ungdomsgård. Där är många du inte känner. Hur tänker och agerar du i början av festen?",
+                [
+                        "Jag gillar inte stora grupper så försöker hitta någon jag har gemensamma intressen med. Det kan bli lite jobbigt eftersom jag då måste småprata först och jag inte är superbra på det. Men hittar jag rätt personer kan det bli trevligt med en intressant diskussion i lugn och ro i ett hörn.",
+                        "Superkul! Jag minglar runt och snackar med alla. Tar kvällen som den kommer, skämtar, skrattar och har inget emot att stå i centrum om det skulle råka bli så.",
+                        "Jag småpratar med andra om trevliga grejer, kollar om de som fixat festen behöver hjälp och går kanske fram till någon som verkar ensam så att hen inte känner sig utanför.",
+                        "Jag gillar att prata med andra och berätta om något spännande eller kul jag sysslar med. Jag är inte heller rädd för att kasta mig in i hetsig diskussion som verkar intressant, även om de andra har en annan åsikt än vad jag har."]],
+        ["Vilken Astrid Lindgren-karaktär identifierar du dig mest med?",
+         ["Orubbliga rövarhövdingen Mattis från Ronja", "Visa Skalle-Per från Ronja Rövardotter",
+          "Fridsamma drängen Alfred från Emil i Lönneberga", "Impulsiva Emil i Lönneberga"]],
         ["Om du måste välja bara ett alternativ, hur vill du helst att andra uppfattar dig?",
                 ["Som snäll", "Som smart", "Som korrekt", "Som kul"]],
         ["Vilket skulle vara värst om någon trodde det om dig? Att du är…",
@@ -114,6 +111,8 @@ addextraquestions = [
 
         
 addextraquestionsanswers = [
+        ['c', 'i', 's', 'd'],
+        ['d', 'c', 's', 'i'],
         ['s', 'd', 'c', 'i'],
         ['d', 's', 'i', 'c'],
         ['d', 'i', 'c', 's'],
@@ -146,4 +145,4 @@ rec_jobs = {
         'c': ['Biomedicinsk analytiker', 'Medicinteknisk ingenjör', 'Medicinsk sekreterare', 'Tandläkare', 'Läkare', 'Psykolog'],
 }
 
-how_many_questions = 12
+how_many_questions = 10
