@@ -3,7 +3,7 @@ import os, sys
 from flask import Flask, session, request, render_template, redirect, url_for
 from .config import Config
 
-from .data import questions, answers, extraquestion, rec_text, rec_jobs, addextraquestions, addextraquestionsanswers, how_many_questions
+from .data import questions, answers, extraquestion, segmentQuestion, rec_text, rec_jobs, addextraquestions, addextraquestionsanswers, how_many_questions
 
 
 def rakna_poang(extra=None):
@@ -74,7 +74,7 @@ def create_app():
             if flera_max:
                 return redirect(url_for('utslagsfraga'))
             else:
-                return redirect(url_for('resultat'))
+                return redirect(url_for('education'))
         else:
             return redirect(url_for('fraga'))
 
@@ -82,9 +82,17 @@ def create_app():
     def utslagsfraga():
         if request.method == 'POST':
             rakna_poang(extra=request.form.get('svar'))
-            return redirect(url_for('resultat'))
+            return redirect(url_for('education'))
         else:
             return render_template('extrafraga.html', fraga=extraquestion, val=session['utslagsfraga'])
+
+    @app.route("/utbildning", methods=['GET', 'POST'])
+    def education():
+        if request.method == 'POST':
+            session['education'] = request.form.get('svar')
+            return redirect(url_for('resultat'))
+        else:
+            return render_template('education.html', fraga=segmentQuestion)
 
     @app.route("/resultat")
     def resultat():

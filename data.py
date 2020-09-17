@@ -88,13 +88,13 @@ addextraquestions = [
                 "Jag försöker antingen styra upp hur vi bör göra för att få ut något av lektionen, eller har jag redan hittat något bättre att lägga min tid på.",
                 "Jag låter andra lösa kaoset på plats men erbjuder mig när läraren senare undrar om någon kan ta fram en checklista på hur detta bör göras för att undvika oreda nästa gång.",
                 "Jag tycker det kan vara kul med oväntade situationer och tar det som det kommer. Jag passar nog bara på att ta det lugnt och snacka med mina vänner."]],
-        
+
         ["Hur pluggar du helst inför stora prov?",
                 ["Tillsammans med en eller ett par kompisar så kan vi hjälpa varandra och ha det trevligt under tiden.",
                 "Det beror lite på ämnet, men jag brukar läsa effektivt på slutet och så mycket som krävs för det betyg jag vill ha. Jag brukar ha koll!",
                 "Det är lite olika hur jag känner mig inspirerad. Ibland pluggar jag själv, ibland med andra, det brukar lösa sig.",
                 "Jag pluggar bäst ostört och på egen hand. Är bra på att systematiskt plugga in saker, särskilt om ämnet intresserar mig."]],
-         
+
          ["Vad är viktigast av följande i ett jobb/grupparbete?",
                 ["Att jag får hålla på med intressanta uppgifter och fördjupa mig i dem",
                 "Att jag får ha idéer och skoja till det",
@@ -109,7 +109,7 @@ addextraquestions = [
                 "Viljestarka Lilla My"]],
 ]
 
-        
+
 addextraquestionsanswers = [
         ['c', 'i', 's', 'd'],
         ['d', 'c', 's', 'i'],
@@ -129,6 +129,16 @@ extraquestion = {
         'd': 'Orädd',
         'c': 'Noggrann',
         'i': 'Social',
+}
+
+segmentQuestion = {
+  'question': 'Hur ser du på att plugga vidare efter gymnasiet?',
+  'answers': {
+    'a': 'Jag vill börja jobba direkt efter gymnasiet',
+    'b': 'Jag kan tänka mig en kortare utbildning, t.ex. yrkeshögskola (YH) på max två år',
+    'c': 'Jag kan tänka mig att läsa på högskola i cirka tre år',
+    'd': 'Jag kan tänka mig en längre utbildning på högskola på över fyra år'
+  }
 }
 
 rec_text = {
