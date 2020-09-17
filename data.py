@@ -149,10 +149,71 @@ rec_text = {
 }
 
 rec_jobs = {
-        'd': [],
-        'i': ['Arbetsterapeut', 'Dietist', 'Fysioterapeut'],
-        's': ['Undersköterska', 'Tandsköterska', 'Barnmorska', 'Sjuksköterska', 'Tandhygienist', 'Läkare', 'Psykolog', 'Tandläkare'],
-        'c': ['Biomedicinsk analytiker', 'Medicinteknisk ingenjör', 'Medicinsk sekreterare', 'Tandläkare', 'Läkare', 'Psykolog'],
+  'd': {
+    'a': [],
+    'b': [],
+    'c': [],
+    'd': []
+  },
+  'i': {
+    'a': [
+      'Kock',
+      'Patientvaktmästare'
+    ],
+    'b': [
+      'Kock'
+    ],
+    'c': [
+      'Arbetsterapeut',
+      'Dietist',
+      'Fysioterapeut'
+    ],
+    'd': [
+      'Arbetsterapeut',
+      'Dietist',
+      'Fysioterapeut'
+    ]
+  },
+  's': {
+    'a': [
+      'Undersköterska',
+      'Patientvaktmästare',
+      'Lokalvårdare'
+    ],
+    'b': [
+      'Tandsköterska',
+      'Undersköterska'
+    ],
+    'c': [
+      'Tandhygienist',
+      'Sjuksköterska'
+    ],
+    'd': [
+      'Barnmorska',
+      'Läkare',
+      'Tandläkare',
+      'Psykolog'
+    ]
+  },
+  'c': {
+    'a': [
+      'Lagerarbetare',
+      'Transportarbetare',
+      'Tvättoperatör'
+    ],
+    'b': [
+      'Medicinsk sekreterare'
+    ],
+    'c': [
+      'Biomedicinsk analytiker'
+    ],
+    'd': [
+      'Medicinteknisk ingenjör',
+      'Läkare',
+      'Tandläkare',
+      'Psykolog'
+    ]
+  }
 }
 
 how_many_questions = 10

@@ -97,7 +97,7 @@ def create_app():
     @app.route("/resultat")
     def resultat():
         primary = max(session['resultat'], key=session['resultat'].get)
-
+        education = session['education']
         temp = session['resultat']
         temp.pop(primary, None)
 
@@ -105,11 +105,11 @@ def create_app():
 
         secondary_jobs = []
 
-        for job in rec_jobs[secondary]:
-            if job not in rec_jobs[primary]:
+        for job in rec_jobs[secondary][education]:
+            if job not in rec_jobs[primary][education]:
                 secondary_jobs.append(job)
 
-        content = {'description': rec_text[primary], 'primary': rec_jobs[primary], 'secondary': secondary_jobs}
+        content = {'description': rec_text[primary], 'primary': rec_jobs[primary][education], 'secondary': secondary_jobs}
         return render_template("resultat.html", content=content)
 
     return app
