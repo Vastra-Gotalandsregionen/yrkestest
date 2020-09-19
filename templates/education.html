@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Utbildning</h1>
+<h1>{% print gettext('Utbildning') %}</h1>
 <form action="/utbildning" method="POST">
     <input type="hidden" name="fid" value="{{ fid }}">
     <fieldset>

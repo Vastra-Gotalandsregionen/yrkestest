@@ -1,7 +1,10 @@
 import os, sys
 
 from flask import Flask, session, request, render_template, redirect, url_for
+from flask_babel import Babel
+from flask_babel import gettext, ngettext, refresh
 from .config import Config
+
 
 from .data import questions, answers, extraquestion, segmentQuestion, rec_text, rec_jobs, addextraquestions, addextraquestionsanswers, how_many_questions
 
@@ -33,10 +36,16 @@ def testa_mest_svar():
     else:
         return False
 
-
 def create_app():
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_object(Config)
+    babel = Babel(app)
+
+    @babel.localeselector
+    def get_locale():
+        if request.args.get('lang'):
+            session['lang'] = request.args.get('lang')
+        return session.get('lang', 'sv')
 
     @app.route("/", methods=['GET', 'POST'])
     def yrkestest():
