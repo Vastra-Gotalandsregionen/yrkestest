@@ -1,22 +1,22 @@
 .container {
     margin-top: 2rem;
   }
-  
+
   h1 {
     margin-bottom: 1rem;
   }
-  
+
   .instruktions-p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
   }
-  
+
   .start-form {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
+
   .btn-success {
     background: #af1685;
     border-color: #af1685;
@@ -25,7 +25,7 @@
     font-weight: 600;
     margin-bottom: 1.5rem;
   }
-  
+
   .btn-success:hover {
     background: #582c83;
     border-color: #582c83;
@@ -40,7 +40,7 @@
   .btn-success:focus {
     box-shadow: 0 0 0 0.2rem rgba(88, 44, 131, .5) !important;
   }
-  
+
   h3 {
     margin-top: 1rem;
   }
@@ -48,11 +48,11 @@
   .bg-success {
     background-color: #582c83 !important;
   }
-  
+
   .lead {
     font-size: 1.4rem;
   }
-  
+
   .btn-warning {
     background: #d86018;
     border-color: #d86018;
@@ -62,12 +62,12 @@
     margin-bottom: 1.5rem;
     padding: 1rem;
   }
-  
+
   .btn-warning:hover {
     background: #c8102e;
     border-color: #c8102e;
     color: white;
-  
+
   }
 
   .btn-warning:active {
@@ -80,11 +80,11 @@
   .btn-warning:focus {
     box-shadow: 0 0 0 0.2rem rgba(200, 16, 46, .5);
   }
-  
+
   .result-container {
     display: none;
   }
-  
+
   .fitting-jobs-p {
     font-size: 1.3rem;
     margin-bottom: 3rem;
@@ -115,7 +115,7 @@
   from {
     transform: rotate(0deg);
   }
-  
+
   to {
     transform: rotate(90deg);
   }
@@ -123,4 +123,18 @@
 
 .result-container {
   display: none;
+}
+
+.lang-menu {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.lang-menu a {
+  margin:0 10px;
+  width: 100px;
+}
+.lang-menu img {
+  width: 100%;
+  height: auto;
 }
