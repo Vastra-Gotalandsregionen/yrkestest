@@ -1,0 +1,315 @@
+# English translations for PROJECT.
+# Copyright (C) 2020 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2020-09-19 22:27+0200\n"
+"PO-Revision-Date: 2020-09-19 19:08+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: data.py:99
+msgid ""
+"Du är på en stor invigningsfest för en ny ungdomsgård. Där är många du inte "
+"känner. Hur tänker och agerar du i början av festen?"
+msgstr ""
+
+#: data.py:101
+msgid ""
+"Jag gillar inte stora grupper så försöker hitta någon jag har gemensamma "
+"intressen med. Det kan bli lite jobbigt eftersom jag då måste småprata först "
+"och jag inte är superbra på det. Men hittar jag rätt personer kan det bli "
+"trevligt med en intressant diskussion i lugn och ro i ett hörn."
+msgstr ""
+
+#: data.py:102
+msgid ""
+"Superkul! Jag minglar runt och snackar med alla. Tar kvällen som den kommer, "
+"skämtar, skrattar och har inget emot att stå i centrum om det skulle råka "
+"bli så."
+msgstr ""
+
+#: data.py:103
+msgid ""
+"Jag småpratar med andra om trevliga grejer, kollar om de som fixat festen "
+"behöver hjälp och går kanske fram till någon som verkar ensam så att hen "
+"inte känner sig utanför."
+msgstr ""
+
+#: data.py:104
+msgid ""
+"Jag gillar att prata med andra och berätta om något spännande eller kul jag "
+"sysslar med. Jag är inte heller rädd för att kasta mig in i hetsig "
+"diskussion som verkar intressant, även om de andra har en annan åsikt än vad "
+"jag har."
+msgstr ""
+
+#: data.py:107
+msgid "Vilken Astrid Lindgren-karaktär identifierar du dig mest med?"
+msgstr ""
+
+#: data.py:109
+msgid "Orubbliga rövarhövdingen Mattis från Ronja"
+msgstr ""
+
+#: data.py:110
+msgid "Visa Skalle-Per från Ronja Rövardotter"
+msgstr ""
+
+#: data.py:111
+msgid "Fridsamma drängen Alfred från Emil i Lönneberga"
+msgstr ""
+
+#: data.py:112
+msgid "Impulsiva Emil i Lönneberga"
+msgstr ""
+
+#: data.py:115
+msgid ""
+"Om du måste välja bara ett alternativ, hur vill du helst att andra uppfattar "
+"dig?"
+msgstr ""
+
+#: data.py:117
+msgid "Som snäll"
+msgstr ""
+
+#: data.py:118
+msgid "Som smart"
+msgstr ""
+
+#: data.py:119
+msgid "Som korrekt"
+msgstr ""
+
+#: data.py:120
+msgid "Som kul"
+msgstr ""
+
+#: data.py:124
+msgid "Vilket skulle vara värst om någon trodde det om dig? Att du är…"
+msgstr ""
+
+#: data.py:126
+msgid "…korkad"
+msgstr ""
+
+#: data.py:127
+msgid "…elak"
+msgstr ""
+
+#: data.py:128
+msgid "…tråkig"
+msgstr ""
+
+#: data.py:129
+msgid "…slarvig"
+msgstr ""
+
+#: data.py:132
+msgid ""
+"Du har fått ett stipendium till en tvåveckors sommarkurs utomlands. Det "
+"finns ett stort urval av platser och kurser att välja på. Hur gör du valet?"
+msgstr ""
+
+#: data.py:134
+msgid ""
+"Jag väljer en plats som erbjuder en kurs som jag kommer ha nytta av i "
+"framtiden."
+msgstr ""
+
+#: data.py:135
+msgid ""
+"Jag googlar och tittar på bilder från de olika platserna och väljer en kurs "
+"och en plats som känns kul och spännande."
+msgstr ""
+
+#: data.py:136
+msgid ""
+"Jag samlar fakta och läser på ordentligt om de olika kurserna och platserna "
+"innan jag fattar mitt beslut"
+msgstr ""
+
+#: data.py:137
+msgid ""
+"Jag frågar mina kompisar om råd och försöker hitta information om vilka "
+"kurser som ger mysigast gemenskap."
+msgstr ""
+
+#: data.py:140
+msgid ""
+"Några i klassen har fått i uppgift att hålla i en idrottslektion utan att "
+"läraren är med. När lektionen ska börja blir det tydligt att de inte gjort "
+"ett bra jobb, de har ingen plan och ingen vet vad ni ska göra. Vissa blir "
+"missnöjda och situationen börjar urarta. Vad gör du?"
+msgstr ""
+
+#: data.py:142
+msgid ""
+"Jag försöker lugna de som blir upprörda, samtidigt som jag försöker stötta "
+"de som är ansvariga genom att försiktigt fråga om jag kan hjälpa till med "
+"något."
+msgstr ""
+
+#: data.py:143
+msgid ""
+"Jag försöker antingen styra upp hur vi bör göra för att få ut något av "
+"lektionen, eller har jag redan hittat något bättre att lägga min tid på."
+msgstr ""
+
+#: data.py:144
+msgid ""
+"Jag låter andra lösa kaoset på plats men erbjuder mig när läraren senare "
+"undrar om någon kan ta fram en checklista på hur detta bör göras för att "
+"undvika oreda nästa gång."
+msgstr ""
+
+#: data.py:145
+msgid ""
+"Jag tycker det kan vara kul med oväntade situationer och tar det som det "
+"kommer. Jag passar nog bara på att ta det lugnt och snacka med mina vänner."
+msgstr ""
+
+#: data.py:148
+msgid "Hur pluggar du helst inför stora prov?"
+msgstr ""
+
+#: data.py:150
+msgid ""
+"Tillsammans med en eller ett par kompisar så kan vi hjälpa varandra och ha "
+"det trevligt under tiden."
+msgstr ""
+
+#: data.py:151
+msgid ""
+"Det beror lite på ämnet, men jag brukar läsa effektivt på slutet och så "
+"mycket som krävs för det betyg jag vill ha. Jag brukar ha koll!"
+msgstr ""
+
+#: data.py:152
+msgid ""
+"Det är lite olika hur jag känner mig inspirerad. Ibland pluggar jag själv, "
+"ibland med andra, det brukar lösa sig."
+msgstr ""
+
+#: data.py:153
+msgid ""
+"Jag pluggar bäst ostört och på egen hand. Är bra på att systematiskt plugga "
+"in saker, särskilt om ämnet intresserar mig."
+msgstr ""
+
+#: data.py:156
+msgid "Vad är viktigast av följande i ett jobb/grupparbete?"
+msgstr ""
+
+#: data.py:158
+msgid "Att jag får hålla på med intressanta uppgifter och fördjupa mig i dem"
+msgstr ""
+
+#: data.py:159
+msgid "Att jag får ha idéer och skoja till det"
+msgstr ""
+
+#: data.py:160
+msgid ""
+"Att jag är tillsammans med trevliga personer och får visa att jag är en bra "
+"kompis"
+msgstr ""
+
+#: data.py:161
+msgid "Att jag får göra utvecklande uppgifter och visa vad jag kan"
+msgstr ""
+
+#: data.py:164
+msgid ""
+"Om någon dissar din jättebra plan om hur något ska göras tycker du "
+"troligtvis att de är…"
+msgstr ""
+
+#: data.py:166
+msgid "…för kritiska"
+msgstr ""
+
+#: data.py:167
+msgid "…korkade"
+msgstr ""
+
+#: data.py:168
+msgid "…oseriösa"
+msgstr ""
+
+#: data.py:169
+msgid "…taskiga"
+msgstr ""
+
+#: data.py:172
+msgid "Vilken Mumin-karaktär identifierar du dig mest med?"
+msgstr ""
+
+#: data.py:174
+msgid "Filosofiska Snusmumriken"
+msgstr ""
+
+#: data.py:175
+msgid "Omtänksamma Muminmamman"
+msgstr ""
+
+#: data.py:176
+msgid "Nyfikna Mumintrollet"
+msgstr ""
+
+#: data.py:177
+msgid "Viljestarka Lilla My"
+msgstr ""
+
+#: data.py:205
+msgid "Hur ser du på att plugga vidare efter gymnasiet?"
+msgstr ""
+
+#: data.py:207
+msgid "Jag vill börja jobba direkt efter gymnasiet"
+msgstr ""
+
+#: data.py:208
+msgid ""
+"Jag kan tänka mig en kortare utbildning, t.ex. yrkeshögskola (YH) på max två "
+"år"
+msgstr ""
+
+#: data.py:209
+msgid "Jag kan tänka mig att läsa på högskola i cirka tre år"
+msgstr ""
+
+#: data.py:210
+msgid "Jag kan tänka mig en längre utbildning på högskola på över fyra år"
+msgstr ""
+
+#: templates/resultat.html:27
+msgid ""
+"https://www.vgregion.se/jobba-i-vgr/yrkesguide-for-unga/yrken-inom-halso--"
+"och-sjukvard/"
+msgstr ""
+
+#: templates/start.html:10
+msgid "Lägg till extra frågor"
+msgstr ""
+
+#: templates/start.html:13
+msgid "Cookies:"
+msgstr ""
+
+#: templates/start.html:13
+msgid ""
+"Appen sparar en temporär cookie som behövs för att testet skall fungera. Vi "
+"samlar <em>inte</em> in någon personligt identifierbar information."
+msgstr ""
