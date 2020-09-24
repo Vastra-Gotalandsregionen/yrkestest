@@ -24,8 +24,10 @@
     }}{{ ', ' if not loop.last }} {% endfor %}
   </p>
   {% endif %}
+  {% if 'sv' == content['language'] %}
   <p><a href="{% print gettext('https://www.vgregion.se/jobba-i-vgr/yrkesguide-for-unga/yrken-inom-halso--och-sjukvard/') %}">{% print gettext('Här kan du läsa om dina yrkesförlag och om fler yrken inom hälso- och sjukvård.') %}</a></p>
-  <p>[ <a href="{{ url_for('yrkestest') }}">{% print gettext('Gör testet igen') %}</a> ]</p>
+  {% endif %}
+  <p>[ <a href="{{ url_for('yrkestest') }}?lang={% print content['language'] %}">{% print gettext('Gör testet igen') %}</a> ]</p>
 </div>
 {% endblock content %}
 {% block script %}

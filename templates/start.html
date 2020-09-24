@@ -7,4 +7,8 @@
     <button type="submit" class="btn btn-success btn-lg">{% print gettext('Starta testet') %}</button>
 </form>
 <p><strong>{% print gettext('Cookies:') %}</strong> {% print gettext('Appen sparar en temporär cookie som behövs för att testet skall fungera. Vi samlar <em>inte</em> in någon personligt identifierbar information.') %}</p>
+<div class="lang-menu">
+    <a href="?lang=en"><img src="/static/img/en.png" alt="English"></a>
+    <a href="?lang=sv"><img src="/static/img/sv.png" alt="Svenska"></a>
+</div>
 {% endblock %}

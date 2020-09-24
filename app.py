@@ -102,6 +102,8 @@ def create_app():
     def resultat():
         primary = max(session['resultat'], key=session['resultat'].get)
         education = session['education']
+        language = get_locale()
+
         temp = session['resultat']
         temp.pop(primary, None)
 
@@ -113,7 +115,7 @@ def create_app():
             if job not in rec_jobs[primary][education]:
                 secondary_jobs.append(job)
 
-        content = {'description': rec_text[primary], 'primary': rec_jobs[primary][education], 'secondary': secondary_jobs}
+        content = {'description': rec_text[primary], 'primary': rec_jobs[primary][education], 'secondary': secondary_jobs, 'language': language}
         return render_template("resultat.html", content=content)
 
     return app
