@@ -50,12 +50,7 @@ def create_app():
     @app.route("/", methods=['GET', 'POST'])
     def yrkestest():
         if request.method == 'POST':
-            if request.form.get('extra') == 'extra':
-                answers.extend(addextraquestionsanswers)
-                questions.extend(addextraquestions)
-                session['numberofquestions'] = 20
-            else:
-                session['numberofquestions'] = 10
+            session['numberofquestions'] = 10
 
             session['fid'] = 0
             session['svar'] = []

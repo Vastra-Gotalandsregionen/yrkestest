@@ -5,10 +5,6 @@
 <p class="instruktions-p"><strong>{% print gettext('Instruktion:') %}</strong> {% print gettext('Tryck på det svar som passar in på dig bäst. Nästa fråga visas automatiskt därefter.') %} </p>
 <form action="/" method="POST" class="start-form mb-5">
     <button type="submit" class="btn btn-success btn-lg">{% print gettext('Starta testet') %}</button>
-    <div class="form-check">
-    <input type="checkbox" name="extra" value="extra" id="more" class="form-check-input">
-    <label class="form-check-label" for="more">{% print gettext('Lägg till extra frågor') %}</label>
-    </div>
 </form>
 <p><strong>{% print gettext('Cookies:') %}</strong> {% print gettext('Appen sparar en temporär cookie som behövs för att testet skall fungera. Vi samlar <em>inte</em> in någon personligt identifierbar information.') %}</p>
 {% endblock %}
