@@ -9,23 +9,25 @@
   </div>
 </div>
 <div class="result-container">
-<h1>Här är ditt resultat:</h1>
+<h1>{% print gettext('Här är ditt resultat:') %}</h1>
 <p class="fitting-jobs-p one text-left">{{ content["description"] }}</p>
   {% if content['primary'][0] %}
-  <h2 class="h3">Yrken som kan passa dig är:</h2>
+  <h2 class="h3">{% print gettext('Yrken som kan passa dig är:') %}</h2>
   <p class="fitting-jobs-p two">
     {% for job in content['primary'] %} {{ job }}{{ ', ' if not loop.last }} {%
     endfor %}
   </p>
   {% endif %} {% if content['secondary'][0] %}
-  <h2 class="h4">Yrken som kanske passar dig är:</h2>
+  <h2 class="h4">{% print gettext('Yrken som kanske passar dig är:') %}</h2>
   <p class="fitting-jobs-p three">
     {% for job in content['secondary'] %} {{ job
     }}{{ ', ' if not loop.last }} {% endfor %}
   </p>
   {% endif %}
-  <p><a href="https://www.vgregion.se/jobba-i-vgr/yrkesguide-for-unga/yrken-inom-halso--och-sjukvard/">Här kan du läsa om dina yrkesförlag och om fler yrken inom hälso- och sjukvård.</a></p>
-  <p>[ <a href="{{ url_for('yrkestest') }}">Gör testet igen</a> ]</p>
+  {% if 'sv' == content['language'] %}
+  <p><a href="{% print gettext('https://www.vgregion.se/jobba-i-vgr/yrkesguide-for-unga/yrken-inom-halso--och-sjukvard/') %}">{% print gettext('Här kan du läsa om dina yrkesförlag och om fler yrken inom hälso- och sjukvård.') %}</a></p>
+  {% endif %}
+  <p>[ <a href="{{ url_for('yrkestest') }}?lang={% print content['language'] %}">{% print gettext('Gör testet igen') %}</a> ]</p>
 </div>
 {% endblock content %}
 {% block script %}

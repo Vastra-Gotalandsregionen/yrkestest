@@ -1,9 +1,12 @@
 import os, sys
 
 from flask import Flask, session, request, render_template, redirect, url_for
+from flask_babel import Babel
+from flask_babel import gettext, ngettext, refresh
 from .config import Config
 
-from .data import questions, answers, extraquestion, rec_text, rec_jobs, addextraquestions, addextraquestionsanswers, how_many_questions
+
+from .data import questions, answers, extraquestion, segmentQuestion, rec_text, rec_jobs, addextraquestions, addextraquestionsanswers, how_many_questions
 
 
 def rakna_poang(extra=None):
@@ -33,20 +36,21 @@ def testa_mest_svar():
     else:
         return False
 
-
 def create_app():
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_object(Config)
+    babel = Babel(app)
+
+    @babel.localeselector
+    def get_locale():
+        if request.args.get('lang'):
+            session['lang'] = request.args.get('lang')
+        return session.get('lang', 'sv')
 
     @app.route("/", methods=['GET', 'POST'])
     def yrkestest():
         if request.method == 'POST':
-            if request.form.get('extra') == 'extra':
-                answers.extend(addextraquestionsanswers)
-                questions.extend(addextraquestions)
-                session['numberofquestions'] = 20
-            else:
-                session['numberofquestions'] = 10
+            session['numberofquestions'] = 10
 
             session['fid'] = 0
             session['svar'] = []
@@ -74,7 +78,7 @@ def create_app():
             if flera_max:
                 return redirect(url_for('utslagsfraga'))
             else:
-                return redirect(url_for('resultat'))
+                return redirect(url_for('education'))
         else:
             return redirect(url_for('fraga'))
 
@@ -82,13 +86,23 @@ def create_app():
     def utslagsfraga():
         if request.method == 'POST':
             rakna_poang(extra=request.form.get('svar'))
-            return redirect(url_for('resultat'))
+            return redirect(url_for('education'))
         else:
             return render_template('extrafraga.html', fraga=extraquestion, val=session['utslagsfraga'])
+
+    @app.route("/utbildning", methods=['GET', 'POST'])
+    def education():
+        if request.method == 'POST':
+            session['education'] = request.form.get('svar')
+            return redirect(url_for('resultat'))
+        else:
+            return render_template('education.html', fraga=segmentQuestion)
 
     @app.route("/resultat")
     def resultat():
         primary = max(session['resultat'], key=session['resultat'].get)
+        education = session['education']
+        language = get_locale()
 
         temp = session['resultat']
         temp.pop(primary, None)
@@ -97,11 +111,11 @@ def create_app():
 
         secondary_jobs = []
 
-        for job in rec_jobs[secondary]:
-            if job not in rec_jobs[primary]:
+        for job in rec_jobs[secondary][education]:
+            if job not in rec_jobs[primary][education]:
                 secondary_jobs.append(job)
 
-        content = {'description': rec_text[primary], 'primary': rec_jobs[primary], 'secondary': secondary_jobs}
+        content = {'description': rec_text[primary], 'primary': rec_jobs[primary][education], 'secondary': secondary_jobs, 'language': language}
         return render_template("resultat.html", content=content)
 
     return app

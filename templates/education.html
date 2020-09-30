@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Yrkestest</h1>
-<form action="/extrafraga/" method="POST">
+<h1>{% print gettext('Utbildning') %}</h1>
+<form action="/utbildning" method="POST">
     <input type="hidden" name="fid" value="{{ fid }}">
     <fieldset>
         <legend class="h3 mb-5">{{ fraga['question'] }}</legend>
 
-    {% for svar in val %}
-    <button type="submit" name="svar" value="{{ svar }}" class="btn btn-warning btn-block">{{ fraga[svar] }}</button>
+    {% for svar in fraga['answers'] %}
+    <button type="submit" name="svar" value="{{ svar }}" class="btn btn-warning btn-block">{{ fraga['answers'][svar] }}</button>
     {% endfor %}
     </fieldset>
 </form>
